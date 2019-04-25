@@ -1,8 +1,9 @@
-
+import pkg_resources
 
 
 def run():
-    print('Here is version!')
+    version = pkg_resources.resource_string('app', '../app.version').decode('utf-8').strip()
+    print('Me version is: {}'.format(version))
     return 0
 
 
